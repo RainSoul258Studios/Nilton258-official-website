@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090b10">
+    <meta
+      name="description"
+      content="RainSoul258 Studios — independent sound, on-chain culture, and a live window into Ethereum."
+    >
+    <title>RainSoul258 Studios — Live Web3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="RainSoul258 Studios home">
+        <img src="RainSoul258LightLogo.png" alt="" width="44" height="44">
+        <span>RAIN<span class="brand-accent">SOUL</span>258<small>STUDIOS</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#sound">Sound</a>
+        <a href="#network">Network</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="wallet-button" id="connect-wallet" type="button">Connect wallet <span aria-hidden="true">↗</span></button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div class="eyebrow"><span class="pulse-dot"></span> INDEPENDENT SOUND · ON-CHAIN CULTURE</div>
+          <h1>FEEL THE<br><span>FREQUENCY.</span></h1>
+          <p class="hero-copy">A little noise in a quiet system.<br>Music, made without permission.</p>
+          <a class="hero-link" href="#sound">ENTER THE SOUND <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-index" aria-hidden="true">RS—258&nbsp;&nbsp; / &nbsp;&nbsp;EST. MMXX</div>
+        <div class="hero-caption">A SIGNAL FROM THE UNDERGROUND</div>
+      </section>
+
+      <section class="sound-section section-wrap" id="sound">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / THE SOUND</p>
+            <h2>Start with a signal.</h2>
+          </div>
+          <span class="section-aside">NO ALGORITHM. JUST FEELING.</span>
+        </div>
+        <div class="track-card">
+          <div class="track-art">
+            <img src="RainSoul258Studios%20notebook%20ICON.png" alt="" width="108" height="108">
+            <span class="track-art-mark" aria-hidden="true">RS</span>
+          </div>
+          <div class="track-details">
+            <span class="track-label">LATEST TRANSMISSION</span>
+            <h3>ReMastereZ</h3>
+            <p>01 Intro M.F. <span>·</span> RainSoul258</p>
+            <audio controls preload="metadata" aria-label="Play ReMastereZ - 01 Intro M.F.">
+              <source src="Nilton%20-%20ReMastereZ%20-%2001%20Intro%20M.F..ogg" type="audio/ogg">
+              Your browser does not support audio playback.
+            </audio>
+          </div>
+          <span class="track-number" aria-hidden="true">01</span>
+        </div>
+      </section>
+
+      <section class="network-section" id="network">
+        <div class="section-wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">02 / THE NETWORK</p>
+              <h2>Ethereum, right now.</h2>
+            </div>
+            <div class="live-status" id="network-status" role="status" aria-live="polite">
+              <span class="pulse-dot"></span><span id="network-status-text">CONNECTING</span>
+            </div>
+          </div>
+          <p class="network-intro">A live read on the chain behind the culture. No dashboard theater — just the network, as it is.</p>
+          <div class="metrics-grid">
+            <article class="metric-card">
+              <div class="metric-top"><span>NETWORK</span><span class="metric-symbol">◎</span></div>
+              <div class="metric-value metric-network">Ethereum</div>
+              <div class="metric-note">MAINNET · CHAIN ID 1</div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span>LATEST BLOCK</span><span class="metric-symbol">⌁</span></div>
+              <div class="metric-value" id="block-number" aria-live="polite">—</div>
+              <div class="metric-note">MOST RECENT CONFIRMED BLOCK</div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span>GAS PRICE</span><span class="metric-symbol">ϟ</span></div>
+              <div class="metric-value"><span id="gas-price">—</span><span class="metric-unit"> GWEI</span></div>
+              <div class="metric-note">CURRENT NETWORK GAS PRICE</div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-top"><span>ETH / USD</span><span class="metric-symbol">$</span></div>
+              <div class="metric-value" id="eth-price">—</div>
+              <div class="metric-note">LIVE MARKET REFERENCE</div>
+            </article>
+          </div>
+          <div class="network-footer">
+            <span>LAST SYNC <time id="last-updated">WAITING FOR DATA</time></span>
+            <a href="https://etherscan.io/" target="_blank" rel="noreferrer">VIEW ETHERSCAN <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="network-error" id="network-error" role="status" hidden></p>
+        </div>
+      </section>
+
+      <section class="about-section section-wrap" id="about">
+        <p class="eyebrow">03 / THE FREQUENCY</p>
+        <div class="about-layout">
+          <h2>Culture belongs<br>to the people<br>who make it.</h2>
+          <div class="about-copy">
+            <p>RainSoul258 Studios is an independent creative space for music that moves on its own terms. The chain is open. The signal is yours.</p>
+            <div class="wallet-panel">
+              <div class="wallet-panel-top">
+                <span class="eyebrow">YOUR CONNECTION</span>
+                <span class="wallet-state" id="wallet-state"><span class="state-dot"></span> NOT CONNECTED</span>
+              </div>
+              <p id="wallet-message">Connect a browser wallet to see your public address. This page never asks you to sign or send a transaction.</p>
+              <a id="wallet-address-link" href="#" target="_blank" rel="noreferrer" hidden></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#home">RAIN<span>SOUL</span>258 STUDIOS</a>
+      <span>INDEPENDENT BY DESIGN.</span>
+      <a href="#home">BACK TO TOP ↑</a>
+    </footer>
+  </body>
+</html>
