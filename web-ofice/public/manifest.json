@@ -1,0 +1,19 @@
+{
+  "name": "Nilton258 Web Oficial",
+  "short_name": "Nilton258",
+  "description": "Ecosistema creativo, Web3 y Metal Industrial.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/images/RainSoul258LightLogo.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

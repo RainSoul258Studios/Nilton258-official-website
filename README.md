@@ -20,3 +20,9 @@ signature or transaction.
 GitHub Pages publishes the repository root directly from the
 `rainsoul258studios-live-web3` branch at
 <https://rainsoul258studios.github.io/Nilton258-official-website/>.
+
+The separate Firebase/Web3 project is in [`web-ofice`](web-ofice/). It includes
+the completed site assets, Firebase Hosting and Functions setup, and the
+Token258 contract. It is linked locally to Firebase project
+`graphic-nexus-k4gkq` but is not deployed; Firebase credentials and the Gemini
+API secret are intentionally not included.

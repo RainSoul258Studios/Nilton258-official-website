@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilton258 Web Oficial | RainSoul258Studios</title>
+    <meta name="description" content="Ecosistema creativo, Web3 y Metal Industrial.">
+    <meta name="theme-color" content="#050505">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Fuentes de Google: New Rocker y Orbitron -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ESTILOS UNIFICADOS -->
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 400;
+            background-color: #050505;
+            color: #e4e4e7;
+            overflow-x: hidden;
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+
+        a { text-decoration: underline; color: #22d3ee; transition: color 0.3s ease; }
+        a:hover { color: #ffff00; }
+
+        .nilton-name {
+            font-family: 'New Rocker', cursive;
+            font-weight: bold;
+            font-style: italic;
+            color: #ffff00;
+            text-shadow: 0 0 10px rgba(255, 255, 0, 0.4);
+        }
+
+        .metal-border {
+            border: 2px solid #52525b;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 0, 0.2);
+            background: linear-gradient(145deg, #18181b 0%, #09090b 100%);
+        }
+
+        .neon-text-cyan { color: #22d3ee; text-shadow: 0 0 8px rgba(34, 211, 238, 0.8); }
+        .neon-text-yellow { color: #ffff00; text-shadow: 0 0 15px rgba(255, 255, 0, 0.9); }
+
+        .landing-bg { background-image: url('/images/Background%20Image%20RainSoul258Studios..png'); background-size: cover; background-position: center; background-repeat: no-repeat; }
+
+        #nav-container { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .nav-top { width: 100%; height: 80px; flex-direction: row; }
+        .nav-side { width: 280px; height: 100vh; flex-direction: column; border-right: 2px solid #52525b; border-bottom: none; }
+        #main-layout { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        .section-content { display: none; animation: fadeIn 0.5s; }
+        .section-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- REPRODUCTOR GLOBAL -->
+    <audio id="global-audio-player" loop>
+        <source src="/audio/Nilton%20-%20ReMastereZ%20-%2001%20Intro%20M.F..ogg" type="audio/ogg">
+    </audio>
+
+    <!-- PORTADA (LANDING) -->
+    <div id="landing-view" class="fixed inset-0 z-50 flex flex-col items-center justify-center landing-bg">
+        <div class="absolute inset-0 bg-black/75 backdrop-blur-[2px]"></div>
+        <div class="relative z-10 text-center flex flex-col items-center p-6">
+            <p class="neon-text-cyan text-xl md:text-2xl tracking-[0.3em] mb-6 uppercase font-bold">Nada significa nada del Todo</p>
+            <h1 class="text-7xl md:text-9xl nilton-name mb-12 transform hover:scale-105 transition duration-500">
+                Nilton258
+            </h1>
+            <button onclick="enterSite()" class="metal-border px-14 py-5 rounded-full text-cyan-400 text-2xl md:text-3xl font-bold hover:bg-zinc-900 transition-all duration-300 shadow-[0_0_30px_rgba(255,255,0,0.4)] uppercase cursor-pointer no-underline">
+                ENTRAR AL SISTEMA
+            </button>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL PWA -->
+    <div id="app-container" class="hidden min-h-screen flex flex-col">
+
+        <nav id="nav-container" class="nav-top fixed top-0 left-0 bg-black/95 backdrop-blur-md metal-border z-40 flex items-center justify-center gap-6 md:gap-8 px-4 md:px-8 border-b-2 text-sm md:text-base">
+            <span class="nilton-name text-4xl hidden md:block mr-auto mt-2">N258F</span>
+            <a href="#" onclick="navigate('inicio')" class="uppercase tracking-wider font-bold no-underline">Inicio</a>
+            <a href="#" onclick="navigate('multimedia')" class="uppercase tracking-wider font-bold no-underline">Multimedia</a>
+            <a href="#" onclick="navigate('ecosistema')" class="uppercase tracking-wider font-bold no-underline">Ecosistema</a>
+            <a href="#" onclick="navigate('sobre-mi')" class="uppercase tracking-wider font-bold no-underline hidden md:inline">Sobre Mí</a>
+            <a href="#" onclick="navigate('tienda')" class="uppercase tracking-wider font-bold no-underline">Tienda</a>
+        </nav>
+
+        <main id="main-layout" class="flex-1 mt-24 p-4 md:p-8 w-full max-w-7xl mx-auto flex flex-col">
+
+            <section id="inicio" class="section-content active">
+                <h2 class="text-4xl md:text-5xl neon-text-cyan mb-10 uppercase border-b-2 border-zinc-700 pb-4 font-bold">Noticias</h2>
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <article class="metal-border rounded-2xl bg-zinc-950/80 overflow-hidden flex flex-col">
+                        <img src="/images/RainSoul258Studios%20notebook%20ICON.png" alt="RainSoul258 Studios artwork" class="w-full h-48 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl neon-text-yellow mb-4 font-bold">Largo&Duro//<span class="nilton-name">Nilton258</span></h3>
+                            <p class="text-zinc-300 leading-relaxed text-sm">Álbum de 24 pistas masterizado a 24-bit/44100Hz. Perfil vocal único.</p>
+                        </div>
+                    </article>
+                    <article class="metal-border rounded-2xl bg-zinc-950/80 overflow-hidden flex flex-col">
+                        <img src="/images/Background%20Image%20RainSoul258Studios..png" alt="Neon city artwork" class="w-full h-48 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl neon-text-yellow mb-4 font-bold">Infraestructura INFINITY</h3>
+                            <p class="text-zinc-300 leading-relaxed text-sm">Ecosistema descentralizado y motor IA integrados bajo protocolo seguro.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="multimedia" class="section-content">
+                <h2 class="text-4xl md:text-5xl neon-text-cyan mb-10 uppercase border-b-2 border-zinc-700 pb-4 font-bold">Multimedia</h2>
+                <div class="mb-14 metal-border p-8 rounded-2xl bg-zinc-950/80">
+                    <h3 class="text-2xl neon-text-yellow mb-6 font-bold">Música: Largo&Duro//<span class="nilton-name">Nilton258</span></h3>
+                    <p class="text-cyan-400 mb-4 text-sm font-bold">Resolución: 24-bit / 44100Hz (.ogg)</p>
+                    <audio controls class="w-full mb-6 rounded-lg bg-zinc-800 outline-none">
+                        <source src="/audio/Nilton%20-%20ReMastereZ%20-%2001%20Intro%20M.F..ogg" type="audio/ogg">
+                    </audio>
+                </div>
+            </section>
+
+            <section id="ecosistema" class="section-content">
+                <h2 class="text-4xl md:text-5xl neon-text-cyan mb-10 uppercase border-b-2 border-zinc-700 pb-4 font-bold">Ecosistema</h2>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="metal-border p-8 rounded-2xl bg-zinc-950/80 flex flex-col">
+                        <h3 class="text-3xl neon-text-yellow mb-4 font-bold">Frikipuntos (ZnZ)</h3>
+                        <p class="text-zinc-300 leading-relaxed mb-4 flex-1 text-sm">Token nativo del sistema de recompensas. Desbloquea interacciones dentro de NiltonTK y la plataforma de aprendizaje.</p>
+                        <p class="text-cyan-400 p-3 bg-zinc-900 rounded inline-block text-center mt-auto font-bold text-sm border border-cyan-900">Estado: En desarrollo</p>
+                    </div>
+                    <div id="web3-gate" class="metal-border p-8 rounded-2xl border-yellow-900 bg-yellow-950/10 relative overflow-hidden transition-colors duration-500">
+                        <div id="lock-screen" class="absolute inset-0 bg-black/95 flex flex-col items-center justify-center z-10 backdrop-blur-md transition-opacity duration-500">
+                            <span class="text-6xl mb-4 text-zinc-300">🔒</span>
+                            <button onclick="unlockWeb3()" class="border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-black px-6 py-3 rounded-full uppercase transition-all text-sm md:text-base">Desbloquear Red</button>
+                        </div>
+                        <h3 class="text-3xl neon-text-cyan mb-4 font-bold">Portal Token258</h3>
+                        <p class="text-zinc-300 mb-8 text-sm">Red de prueba: <span class="text-cyan-400 font-bold uppercase tracking-widest">Optimism Sepolia</span></p>
+                        <button id="btn-connect-web3" onclick="connectWeb3()" class="bg-cyan-500 px-6 py-4 rounded-xl text-black font-black w-full hover:bg-cyan-400 transition-colors uppercase">Conectar Wallet</button>
+                        <p id="web3-status" class="mt-4 text-center text-sm text-zinc-300" role="status" aria-live="polite">Solo se consultará tu dirección pública y el saldo del token.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sobre-mi" class="section-content">
+                <h2 class="text-4xl md:text-5xl neon-text-cyan mb-10 uppercase border-b-2 border-zinc-700 pb-4 font-bold">Sobre Mí</h2>
+                <div class="space-y-8">
+                    <div class="metal-border p-8 rounded-2xl bg-zinc-950/80 flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-48 h-48 rounded-full overflow-hidden metal-border flex-shrink-0 shadow-[0_0_20px_rgba(34,211,238,0.4)]">
+                            <img src="/images/RainSoul258LightLogo.png" alt="RainSoul258 Studios emblem" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-5xl nilton-name mb-2 text-center md:text-left">Nilton258</h3>
+                            <div class="text-center md:text-left mb-4">
+                                <span class="text-cyan-400 text-xs font-bold tracking-[0.3em] uppercase border border-cyan-900 bg-cyan-950/50 px-3 py-1 rounded inline-block">Administrador / Sistema Raíz</span>
+                            </div>
+                            <p class="text-zinc-300 leading-relaxed mb-4 text-sm md:text-base text-center md:text-left">Fundador y arquitecto principal de RainSoul258Studios (Zaragoza). Combino el desarrollo de software Full-Stack y Web3 con la producción de metal industrial cibernético.</p>
+                        </div>
+                    </div>
+
+                    <div class="metal-border p-8 rounded-2xl bg-zinc-950/80 relative overflow-hidden">
+                        <img src="/images/RainSoul258LightLogo.png" class="absolute right-0 top-1/2 transform -translate-y-1/2 w-96 opacity-10 blur-[2px]" alt="" aria-hidden="true">
+                        <div class="relative z-10">
+                            <h3 class="text-3xl neon-text-cyan mb-6 border-b border-zinc-800 pb-2 font-bold">Obras Destacadas</h3>
+                            <ul class="list-disc list-inside text-zinc-300 space-y-3 font-normal text-sm md:text-base">
+                                <li><strong class="text-yellow-400">Largo&Duro//<span class="nilton-name text-xl">Nilton258</span></strong> - Álbum de 24 pistas.</li>
+                                <li><strong class="text-yellow-400">Metal Tycoon Game</strong> - Videojuego y simulación.</li>
+                                <li><strong class="text-yellow-400">Plataforma Educativa</strong> - Web Audio API (Método Troy Stetina).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tienda" class="section-content">
+                <h2 class="text-4xl md:text-5xl neon-text-cyan mb-10 uppercase border-b-2 border-zinc-700 pb-4 font-bold">Tienda Oficial</h2>
+                <div class="metal-border p-20 text-center rounded-2xl bg-zinc-950/80">
+                    <p class="text-zinc-300 text-3xl mb-6 font-bold">FORJANDO INVENTARIO</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- WIDGET GEMINI -->
+    <div id="gemini-chat-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <div id="chat-box" class="hidden w-[90vw] md:w-80 h-[28rem] metal-border rounded-xl bg-zinc-950/95 backdrop-blur-md mb-4 flex flex-col overflow-hidden transition-all duration-300">
+            <div class="bg-black border-b border-zinc-800 p-3 flex justify-between items-center">
+                <span class="text-yellow-400 font-bold text-xl tracking-wider nilton-name">Nilton_AI</span>
+                <button onclick="toggleChat()" class="text-cyan-400 hover:text-white font-bold text-lg">X</button>
+            </div>
+            <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-3 text-sm font-normal text-zinc-300">
+                <div class="bg-zinc-900 border border-cyan-900 p-2 rounded-lg inline-block">Sistema inicializado. Base de datos de audio cargada. ¿En qué te ayudo?</div>
+            </div>
+            <div class="p-3 border-t border-zinc-800 bg-black flex gap-2">
+                <input type="text" id="chat-input" placeholder="Comando..." class="flex-1 bg-zinc-900 text-cyan-400 border border-zinc-700 rounded px-2 py-1 outline-none font-normal text-sm" onkeypress="if(event.key === 'Enter') sendMessage()">
+                <button onclick="sendMessage()" class="bg-cyan-600 hover:bg-cyan-500 text-black px-3 py-1 rounded font-bold uppercase text-xs">Enviar</button>
+            </div>
+        </div>
+        <button onclick="toggleChat()" class="w-16 h-16 rounded-full metal-border bg-black flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+            <span class="text-3xl">🤖</span>
+        </button>
+    </div>
+
+    <!-- LIBRERÍAS EXTERNAS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.10.0/ethers.umd.min.js"></script>
+
+    <script src="/js/app.js" defer></script>
+    <script src="/js/web3-client.js" defer></script>
+    <script src="/js/gemini-ui.js" defer></script>
+</body>
+</html>

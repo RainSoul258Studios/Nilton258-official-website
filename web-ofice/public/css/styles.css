@@ -1,0 +1,10 @@
+body { font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; font-weight: bold; font-style: italic; background-color: #050505; color: #e4e4e7; margin: 0; }
+a { text-decoration: underline; color: #22d3ee; transition: color 0.3s ease; }
+a:hover { color: #ffff00; }
+.font-new-rocker { font-family: 'New Rocker', cursive; font-style: normal; }
+.metal-border { border: 2px solid #52525b; box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 0 0 15px rgba(255,255,0,0.2); background: linear-gradient(145deg, #18181b 0%, #09090b 100%); }
+.neon-text-cyan { color: #22d3ee; text-shadow: 0 0 8px rgba(34,211,238,0.8); }
+.neon-text-yellow { color: #ffff00; text-shadow: 0 0 15px rgba(255,255,0,0.9), 0 0 30px rgba(255,255,0,0.5); }
+.section-content { display: none; animation: fadeIn 0.5s; }
+.section-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }

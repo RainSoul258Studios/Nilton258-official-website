@@ -1,0 +1,23 @@
+{
+  "name": "nilton258-oficialweb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RainSoul258 Studios website, Firebase backend, and Token258 smart contract.",
+  "type": "module",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:optimism-sepolia": "npm run compile && node scripts/deploy.js optimism-sepolia",
+    "deploy:optimism": "npm run compile && node scripts/deploy.js optimism",
+    "firebase:emulators": "npx firebase-tools emulators:start --only hosting,functions --project demo-nilton258",
+    "firebase:deploy": "npx firebase-tools deploy --only hosting,functions"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^5.6.1",
+    "ethers": "^6.17.0",
+    "dotenv": "^18.0.7",
+    "hardhat": "^3.19.0"
+  }
+}
