@@ -17,5 +17,6 @@ Both refresh every 15 seconds. A compatible browser wallet is optional; wallet
 connection only reads the public account and chain, and never requests a
 signature or transaction.
 
-GitHub Pages deploys pushes to the `rainsoul258studios-live-web3` branch at
+GitHub Pages publishes the repository root directly from the
+`rainsoul258studios-live-web3` branch at
 <https://rainsoul258studios.github.io/Nilton258-official-website/>.
